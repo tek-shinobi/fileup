@@ -1,0 +1,24 @@
+[
+    {
+        "playerName":"Asterix",
+        "avatarName": "johnny",
+        "playerScore": 100,
+        "lifeCount": 111,
+        "game":"second life"
+    },
+    {
+        "playerName":"Jane Doe",
+        "avatarName": "elder-jane",
+        "playerScore": 131,
+        "lifeCount": 10,
+        "game":"the last of us"
+    },
+    {
+        "playerName":"Imhotep",
+        "avatarName": "egyptian prince",
+        "playerScore": 131,
+        "lifeCount": 10,
+        "game":"Assassins Creed IV"
+    }
+
+]
