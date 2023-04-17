@@ -1,15 +1,10 @@
 # FileUpAPI Service  
 A service for uploading a file to server via GRPC protocol. If the file is JSON, further server side processign is done.
-
-**Note:** A GRPC client application for testing the server is included. 
-
-**Note:** Server application is a CLI application and takes command line params to set port, host, dir (directory where uploaded files reside) and jsondir (directory where processed JSON files reside)
-
-**Note** Test cases use GRPC client for initiating the upload to the server 
-
-**Note:** Assumption is made that JSON processing is post processing and is not part of response to client.
-
-**Note:** Assumption is made that JSON file has a known schema.
+- A GRPC client application for testing the server is included. 
+- Server application is a CLI application and takes command line flags to set `-port` (for specifying portname), `-host` (for specifying hostname), `-dir` (directory where uploaded files reside) and `-jsondir` (directory where processed JSON files reside)
+- Test cases use GRPC client for initiating the upload to the server 
+- Assumption is made that JSON processing is post processing and is not part of response to client.
+- Assumption is made that JSON file has a known schema.
 
 ## Commentary
 Clean architecture pattern is used. The application is divided in api layer, service layer and repository layer (repository layer in this scenario is only persisting files to hard disk). One way data flow is maintained with data flowing from api layer (only responsibility is payload validation), to service layer (only responsibility is to implement business logic), to repository layer (only responsibility is to interact with the database)
