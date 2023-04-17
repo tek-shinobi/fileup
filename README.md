@@ -15,10 +15,8 @@ A service for uploading a file to server via GRPC protocol. If the file is JSON,
 Clean architecture pattern is used. The application is divided in api layer, service layer and repository layer (repository layer in this scenario is only persisting files to hard disk). One way data flow is maintained with data flowing from api layer (only responsibility is payload validation), to service layer (only responsibility is to implement business logic), to repository layer (only responsibility is to interact with the database)
 
 Memory footprint optimizations:
-
-For uploading file, GRPC client streaming is used.
-
-For JSON processing, token iterator based json unmarshaling is done on source JSON file.
+- For uploading file, GRPC client streaming is used.
+- For JSON processing, token iterator based json unmarshaling is done on source JSON file.
 
 ## Build Instructions
 
